@@ -28,7 +28,7 @@ public class TestMovement : MonoBehaviour
         {
             rb2D.AddForce(transform.right * -velocity, ForceMode2D.Impulse);
         }
-        if (Input.GetKey(KeyCode.Space) && grounded)
+        if (Input.GetKey(KeyCode.W) && grounded)
         {
             rb2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         }
