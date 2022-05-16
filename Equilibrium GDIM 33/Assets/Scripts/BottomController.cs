@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestMovement : MonoBehaviour
+public class BottomController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
-    
-    [SerializeField] private float velocity = 7.0f;
-    [SerializeField] private float jumpForce = 30.0f;
+
+    [SerializeField] private float velocity = 1.0f;
+    [SerializeField] private float jumpForce = 15.0f;
 
     private bool grounded;
 
@@ -20,23 +20,24 @@ public class TestMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             rb2D.AddForce(transform.right * velocity, ForceMode2D.Impulse);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb2D.AddForce(transform.right * -velocity, ForceMode2D.Impulse);
         }
-        if (Input.GetKey(KeyCode.W) && grounded)
+        if (Input.GetKey(KeyCode.UpArrow) && grounded)
         {
             rb2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         }
+
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 8 && !grounded)
+        if (collision.gameObject.layer == 8 && !grounded)
         {
             grounded = true;
         }
