@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
 
     [SerializeField] private GameObject top_winPad;
     [SerializeField] private GameObject bottom_winPad;
