@@ -7,6 +7,7 @@ public class BottomController: MonoBehaviour
 
     private Rigidbody2D rb2D;
     private BoxCollider2D boxcollider2d;
+    private bool grounded;
     [SerializeField] private LayerMask platformLayerMask;
 
     private void Awake(){
@@ -17,7 +18,7 @@ public class BottomController: MonoBehaviour
     private void Update(){
         float moveSpeed = 14f;
 
-        if(isGrounded() && Input.GetKeyDown(KeyCode.UpArrow)){
+        if(grounded && Input.GetKeyDown(KeyCode.UpArrow)){
             float jumpVelocity = 20f;
             rb2D.velocity = Vector2.up * jumpVelocity;
         }
@@ -32,28 +33,14 @@ public class BottomController: MonoBehaviour
         }
     }
 
-    private bool isGrounded(){
-        RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxcollider2d.bounds.center, boxcollider2d.bounds.size, 0f, Vector2.down * .1f, platformLayerMask);
-        Debug.Log(raycastHit2d.collider);
-        return raycastHit2d.collider != null;
+    private void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "ground" && !grounded)
+            grounded = true;
     }
 
-
-    private void HandleMovement(){
-
-        float moveSpeed = 10f;
-
-        if(Input.GetKey(KeyCode.LeftArrow)){
-            rb2D.velocity = new Vector2(-moveSpeed, rb2D.velocity.y);
-        }
-        else{
-            if(Input.GetKey(KeyCode.RightArrow)){
-                rb2D.velocity = new Vector2(moveSpeed, rb2D.velocity.y);
-            }
-            else{
-                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-            }
-        }
+    private void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.tag == "ground" && grounded)
+            grounded = false;
     }
 }
 
