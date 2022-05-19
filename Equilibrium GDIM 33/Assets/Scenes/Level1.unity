@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1368130723, guid: 7e6979a1513eb5f48a7de6c8bcdc924d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4983889442494378096, guid: 7e6979a1513eb5f48a7de6c8bcdc924d, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1122,7 +1126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739099362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb6fafceb351b1b4d87cd70036156c93, type: 3}
   m_Name: 
@@ -1130,6 +1134,21 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &739099368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739099362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2606110fe726dc444b916eae8ac1c2d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &803070499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1896,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6000045208195636196, guid: 7e6979a1513eb5f48a7de6c8bcdc924d, type: 3}
   m_PrefabInstance: {fileID: 382180511}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368130728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368130722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6fafceb351b1b4d87cd70036156c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1397206146
 GameObject:
   m_ObjectHideFlags: 0
