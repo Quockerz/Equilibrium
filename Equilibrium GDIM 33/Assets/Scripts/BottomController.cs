@@ -34,12 +34,12 @@ public class BottomController: MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "ground" && !grounded)
+        if(collision.gameObject.layer == 8 && !grounded)
             grounded = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.tag == "ground" && grounded)
+        if(collision.gameObject.layer == 8 && grounded)
             grounded = false;
     }
 }

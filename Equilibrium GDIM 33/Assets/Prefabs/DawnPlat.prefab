@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8528675559049902498}
   - component: {fileID: 8528675559049902499}
   - component: {fileID: 8528675559049902500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DawnPlat
   m_TagString: ground
   m_Icon: {fileID: 0}
