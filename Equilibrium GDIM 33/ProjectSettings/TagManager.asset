@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - killzone
+  - Affected
   layers:
   - Default
   - TransparentFX
