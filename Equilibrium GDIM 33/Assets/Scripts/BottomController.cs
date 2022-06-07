@@ -9,10 +9,12 @@ public class BottomController: MonoBehaviour
     private BoxCollider2D boxcollider2d;
     private bool grounded;
     [SerializeField] private LayerMask platformLayerMask;
+    AudioSource jumpsound;
 
     private void Awake(){
         rb2D = transform.GetComponent<Rigidbody2D>();
         boxcollider2d = transform.GetComponent<BoxCollider2D>();
+        jumpsound = GetComponent<AudioSource>();
     }
 
     private void Update(){
@@ -21,6 +23,7 @@ public class BottomController: MonoBehaviour
         if(grounded && Input.GetKeyDown(KeyCode.UpArrow)){
             float jumpVelocity = 20f;
             rb2D.velocity = Vector2.up * jumpVelocity;
+            jumpsound.Play();
         }
         else if(Input.GetKey(KeyCode.LeftArrow)){
             rb2D.velocity = new Vector2(-moveSpeed, rb2D.velocity.y);
