@@ -9,12 +9,16 @@ public class InteractLever : MonoBehaviour
     bool withinArea = false;
     bool activated = false;
     [SerializeField] GameObject affectedElement;
+    private AudioSource activateSound;
+    private bool soundplayed = false;
 
     SpriteRenderer leverR;
 
     void Awake()
     {
         leverR = GetComponent<SpriteRenderer>();
+        activateSound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -34,6 +38,11 @@ public class InteractLever : MonoBehaviour
         //Changes the color of the lever depending on its flip state
         if (activated)
         {
+            if (!soundplayed)
+            {
+                activateSound.Play();
+                soundplayed = true;
+            }
             leverR.color = Color.green;
         }
         else
