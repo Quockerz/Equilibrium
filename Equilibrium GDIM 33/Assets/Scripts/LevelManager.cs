@@ -16,6 +16,10 @@ public class LevelManager : MonoBehaviour
     private SpriteRenderer top_sprite;
     private SpriteRenderer bottom_sprite;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
     private void Start()
     {
         nextlevelButton.SetActive(false); // set win buttons to not active when game starts
