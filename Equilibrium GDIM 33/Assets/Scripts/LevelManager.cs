@@ -12,13 +12,17 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private GameObject nextlevelButton;
     [SerializeField] private GameObject win_text;
+    [SerializeField] private GameObject bg;
 
     private SpriteRenderer top_sprite;
     private SpriteRenderer bottom_sprite;
 
+    private AudioSource bg_music;
     private void Awake()
     {
         Time.timeScale = 1;
+        bg_music = bg.GetComponent<AudioSource>();
+
     }
     private void Start()
     {
@@ -40,6 +44,7 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 0; //pause game
             win_text.SetActive(true); //make level complete text appear
             nextlevelButton.SetActive(true); //make next level button appear
+            bg_music.Pause();
         }
     }
 

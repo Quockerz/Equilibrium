@@ -214,6 +214,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8528675559049902498, guid: 1d83eba40e411834fae0c3f0bc13b2dc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528675559049902498, guid: 1d83eba40e411834fae0c3f0bc13b2dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.79
       objectReference: {fileID: 0}
@@ -641,7 +645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381927736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.6, y: -9.16, z: 0}
+  m_LocalPosition: {x: 14.93, y: -9.16, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2744,7 +2748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877355864362530618, guid: e6a4d74b00eeed343b0471a84e506236, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.41
+      value: 12.16
       objectReference: {fileID: 0}
     - target: {fileID: 6877355864362530618, guid: e6a4d74b00eeed343b0471a84e506236, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3051,9 +3055,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   top_winPad: {fileID: 1081309643}
   bottom_winPad: {fileID: 638021337}
-  nextLevel_name: level5
+  nextLevel_name: level2
   nextlevelButton: {fileID: 477325627}
   win_text: {fileID: 2064554080}
+  bg: {fileID: 1082934812}
 --- !u!4 &1690710924
 Transform:
   m_ObjectHideFlags: 0
@@ -3715,7 +3720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005377347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -251.83, y: -7.27, z: 0}
+  m_LocalPosition: {x: -267.42, y: -11.56, z: 0}
   m_LocalScale: {x: 0.3846, y: 0.3216, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3920,6 +3925,7 @@ GameObject:
   - component: {fileID: 2064554083}
   - component: {fileID: 2064554082}
   - component: {fileID: 2064554084}
+  - component: {fileID: 2064554085}
   m_Layer: 5
   m_Name: Level Complete Text
   m_TagString: Untagged
@@ -4001,6 +4007,102 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 9c87a03a28b9e4448ab08b73db1a207c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &2064554085
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064554080}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1555f6cc153724f468116719e908e31e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
