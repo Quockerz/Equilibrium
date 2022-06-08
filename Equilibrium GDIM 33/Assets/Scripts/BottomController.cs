@@ -21,7 +21,7 @@ public class BottomController: MonoBehaviour
         float moveSpeed = 14f;
 
         if(grounded && Input.GetKeyDown(KeyCode.UpArrow)){
-            float jumpVelocity = 20f;
+            float jumpVelocity = 12f;
             rb2D.velocity = Vector2.up * jumpVelocity;
             jumpsound.Play();
         }
